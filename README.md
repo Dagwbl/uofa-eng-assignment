@@ -4,6 +4,14 @@ A Quarto template for University of Alberta engineering assignments.
 
 Originally an Overleaf/LaTeX template, now converted to Quarto for easier document creation and modern publishing workflows.
 
+## Preview
+
+Here's what a rendered assignment looks like:
+
+[![Preview](preview.png)](preview.pdf)
+
+*Click the image to view the full PDF*
+
 ## Installing
 
 To use this template, you can install it directly from GitHub:
