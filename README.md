@@ -75,7 +75,7 @@ The path can be:
 
 ## Template Architecture
 
-This template uses Quarto's template-partials system, which allows for better modularity and customization compared to the traditional include-in-header approach. The main template partial is located in `_extensions/uofa-eng-assignment/partials/title.tex`.
+This template uses Quarto's template-partials system, which allows for better modularity and customization compared to the traditional include-in-header approach. The main template partial is located in `_extensions/uofa-eng-assignment/title.tex`.
 
 ## Example
 
