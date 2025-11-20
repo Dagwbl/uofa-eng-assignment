@@ -59,6 +59,7 @@ If you need to use advanced LaTeX packages that were commented out to avoid conf
 - `fancybox` - conflicts with verbatim environments
 - `pstricks` and `pst-plot` - may interfere with syntax highlighting
 - `listings` - conflicts with Quarto's default code highlighting (use Quarto's native code blocks instead)
+- `textgreek` - requires CB Greek fonts (LGR encoding) which may not be available in minimal TeX distributions like TinyTeX. Install the `cbfonts` package if you need Greek Unicode characters in text mode.
 
 ## Example
 
