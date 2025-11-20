@@ -1,11 +1,15 @@
 ---
-title: "Assignment 1"
+title: "Assignment Title"
 format:
   uofa-eng-assignment-pdf: default
-author: "Amin Bashiri"
-student-id: "0000000"
-course: "Software Construction, Verification, and Evolution (ECE 522)"
-assignment: "Assignment 1"
+author: "Your Full Name"
+student-id: "Your Student ID"
+course: "Course Name (Course Code)"
+assignment: "Assignment Number"
+# Optional: Uncomment and set your assignment date
+# date: "YYYY-MM-DD"
+# Optional: Uncomment and set custom logo path (relative to document or absolute)
+# logo: "path/to/your/logo.png"
 ---
 
 ## Question Number 1
