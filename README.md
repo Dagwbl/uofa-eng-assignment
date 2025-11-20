@@ -1,28 +1,26 @@
 # uofa-eng-assignment
 
-A Quarto template for University of Alberta engineering assignments.
+A Quarto partial template for University of Alberta engineering assignments.
 
 Originally an Overleaf/LaTeX template, now converted to Quarto using template-partials for modern publishing workflows.
 
-## Installing
-
-To use this template, you can install it directly from GitHub:
-
-```bash
-quarto use template Dagwbl/uofa-eng-assignment
-```
-
-This will install the extension and create an example qmd file that you can use as a starting place for your assignment.
-
 ## Using
 
-After installing, create or edit a `.qmd` file with the following YAML header:
+Copy the template files (`title.tex`, `logo.png`, `uofa-metadata.lua`, and `template.qmd`) to your project directory.
+
+Use the following YAML header in your `.qmd` file:
 
 ```yaml
 ---
 title: "Assignment Title"
 format:
-  uofa-eng-assignment-pdf: default
+  pdf:
+    template-partials:
+      - title.tex
+    pdf-engine: lualatex
+    fig-pos: H
+    filters:
+      - uofa-metadata.lua
 author: "Your Full Name"
 student-id: "Your Student ID"
 course: "Course Name (Course Code)"
@@ -47,7 +45,7 @@ The template supports the following metadata fields:
 - `course`: Full course name and code
 - `assignment`: Assignment number or title
 - `date`: (Optional) Assignment date in YYYY-MM-DD format
-- `logo`: (Optional) Custom path to a logo image file (defaults to the UofA Engineering logo)
+- `logo`: (Optional) Custom path to a logo image file (defaults to `logo.png`)
 
 ## Features
 
@@ -75,7 +73,14 @@ The path can be:
 
 ## Template Architecture
 
-This template uses Quarto's template-partials system, which allows for better modularity and customization compared to the traditional include-in-header approach. The main template partial is located in `_extensions/uofa-eng-assignment/title.tex`.
+This is a partial template that uses Quarto's template-partials system. The main template partial is `title.tex`, which contains the custom title page formatting. The `uofa-metadata.lua` filter processes the YAML metadata and injects it into the LaTeX template.
+
+## Files
+
+- `title.tex` - LaTeX template partial for the title page
+- `logo.png` - UofA Engineering logo
+- `uofa-metadata.lua` - Lua filter for processing metadata
+- `template.qmd` - Example document with hints and placeholders
 
 ## Example
 

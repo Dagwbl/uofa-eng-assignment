@@ -1,7 +1,13 @@
 ---
 title: "Assignment Title"
 format:
-  uofa-eng-assignment-pdf: default
+  pdf:
+    template-partials:
+      - title.tex
+    pdf-engine: lualatex
+    fig-pos: H
+    filters:
+      - uofa-metadata.lua
 author: "Your Full Name"
 student-id: "Your Student ID"
 course: "Course Name (Course Code)"
