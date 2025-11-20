@@ -6,6 +6,7 @@ contributes:
   formats:
     pdf:
       pdf-engine: lualatex
+      fig-pos: H
       include-in-header:
         - uofa-eng-assignment.tex
       filters:
