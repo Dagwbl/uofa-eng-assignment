@@ -1,0 +1,12 @@
+title: UofA Engineering Assignment
+author: Amin Bashiri
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    pdf:
+      pdf-engine: pdflatex
+      include-in-header:
+        - uofa-eng-assignment.tex
+      filters:
+        - uofa-metadata.lua
