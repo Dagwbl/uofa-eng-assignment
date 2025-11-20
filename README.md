@@ -45,6 +45,21 @@ The template supports the following metadata fields:
 - `course`: Full course name and code
 - `assignment`: Assignment number or title
 
+## Features
+
+- Custom title page with student information and UofA Engineering logo
+- Support for mathematical equations (via amsmath, amsfonts, amssymb)
+- Code syntax highlighting (Quarto's default)
+- Compatible with all standard Quarto/Pandoc markdown features
+
+## Advanced Usage
+
+If you need to use advanced LaTeX packages that were commented out to avoid conflicts, you can add them back by modifying `_extensions/uofa-eng-assignment/uofa-eng-assignment.tex`. Packages that may conflict with Quarto's code highlighting include:
+
+- `fancybox` - conflicts with verbatim environments
+- `pstricks` and `pst-plot` - may interfere with syntax highlighting
+- `listings` - conflicts with Quarto's default code highlighting (use Quarto's native code blocks instead)
+
 ## Example
 
 See [template.qmd](template.qmd) or [example.qmd](example.qmd) for complete examples.
