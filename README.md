@@ -49,6 +49,7 @@ The template supports the following metadata fields:
 
 - Custom title page with student information and UofA Engineering logo
 - Support for mathematical equations (via amsmath, amsfonts, amssymb)
+- Support for Greek Unicode characters in text mode (via textgreek)
 - Code syntax highlighting (Quarto's default)
 - Compatible with all standard Quarto/Pandoc markdown features
 
