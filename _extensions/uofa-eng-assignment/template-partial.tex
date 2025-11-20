@@ -1,0 +1,343 @@
+% ============================================================================
+% UofA Engineering Assignment LaTeX Header - Template Partial
+% ============================================================================
+% This file contains LaTeX commands to format University of Alberta 
+% Engineering assignment documents. It's a "partial" template that can be
+% included in other LaTeX documents.
+%
+% Based on the original uofa-eng-assignment.cls
+% ============================================================================
+
+% ----------------------------------------------------------------------------
+% PAGE LAYOUT SETTINGS
+% ----------------------------------------------------------------------------
+% These commands control the dimensions of the text area and margins
+
+% \setlength sets the value of a length variable in LaTeX
+% \textwidth: width of the main text area (6.5 inches)
+\setlength{\textwidth}{6.5in}
+
+% \textheight: height of the main text area (9 inches)
+\setlength{\textheight}{9.in}
+
+% \oddsidemargin: left margin on odd-numbered pages (0 inches = default)
+\setlength{\oddsidemargin}{0in}
+
+% \headheight: height reserved for page headers (0 = no header space)
+\setlength{\headheight}{0in}
+
+% ----------------------------------------------------------------------------
+% GEOMETRY PACKAGE - Advanced Page Layout
+% ----------------------------------------------------------------------------
+% The geometry package provides an easier way to set page margins
+% [margin=2cm] sets all margins (top, bottom, left, right) to 2 centimeters
+\usepackage[margin=2cm]{geometry}
+
+% ----------------------------------------------------------------------------
+% COLOR DEFINITIONS
+% ----------------------------------------------------------------------------
+% Define custom colors for syntax highlighting and other uses
+% Colors are defined in RGB format with values from 0 to 1
+
+\usepackage{color}
+
+% Green color for comments in code (60% green, 0% red, 0% blue)
+\definecolor{codegreen}{rgb}{0,0.6,0}
+
+% Gray color for line numbers (50% of each color = medium gray)
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+
+% Purple color for strings (58% red, 0% green, 82% blue)
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+
+% Light beige background color (95% red, 95% green, 92% blue)
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% ----------------------------------------------------------------------------
+% CODE LISTINGS CONFIGURATION (DISABLED BY DEFAULT)
+% ----------------------------------------------------------------------------
+% The listings package is commented out to avoid conflicts with Quarto's
+% built-in syntax highlighting. Quarto uses its own system for code blocks.
+%
+% If you need to use raw LaTeX code blocks with \begin{lstlisting}, 
+% uncomment the following lines. However, this may interfere with Quarto's
+% markdown code blocks (```language).
+%
+% \usepackage{listings}
+%
+% \lstdefinestyle{mystyle}{
+%     % Background color for code blocks
+%     backgroundcolor=\color{backcolour},
+%     % Color for comments in code
+%     commentstyle=\color{codegreen},
+%     % Color for keywords (like 'if', 'while', 'class')
+%     keywordstyle=\color{magenta},
+%     % Style for line numbers (tiny font, gray color)
+%     numberstyle=\tiny\color{codegray},
+%     % Color for strings in code
+%     stringstyle=\color{codepurple},
+%     % Base font size for code
+%     basicstyle=\footnotesize,
+%     % Don't break lines at whitespace only
+%     breakatwhitespace=false,
+%     % Allow automatic line breaking
+%     breaklines=true,
+%     % Position of caption (b = bottom)
+%     captionpos=b,
+%     % Preserve spaces in code
+%     keepspaces=true,
+%     % Show line numbers on the left
+%     numbers=left,
+%     % Distance between line numbers and code
+%     numbersep=5pt,
+%     % Don't show spaces as special characters
+%     showspaces=false,
+%     % Don't show spaces in strings as special characters
+%     showstringspaces=false,
+%     % Don't show tabs as special characters
+%     showtabs=false,
+%     % Tab size in spaces
+%     tabsize=2
+% }
+
+% ----------------------------------------------------------------------------
+% GRAPHICS AND IMAGE PACKAGES
+% ----------------------------------------------------------------------------
+
+% \usepackage loads external packages that add functionality to LaTeX
+
+% graphicx: Enhanced support for including images
+\usepackage{graphicx}
+
+% fancybox: Creates fancy boxes around text (commented out)
+% This package may conflict with verbatim environments (code blocks)
+% \usepackage{fancybox}
+
+% inputenc: Specifies input encoding (UTF-8 for Unicode characters)
+% UTF-8 allows you to use special characters directly in your document
+\usepackage[utf8]{inputenc}
+
+% textgreek: Allows Greek letters in text mode (e.g., α, β, γ)
+% Commented out by default, uncomment if you need Greek letters outside math mode
+% \usepackage{textgreek}
+
+% epsfig: Legacy package for including EPS graphics
+% graphicx (loaded above) is more modern but epsfig is kept for compatibility
+\usepackage{epsfig,graphicx}
+
+% multicol: Allows text to be typeset in multiple columns
+\usepackage{multicol}
+
+% ----------------------------------------------------------------------------
+% PSTRICKS PACKAGES (DISABLED BY DEFAULT)
+% ----------------------------------------------------------------------------
+% pstricks and pst-plot are powerful packages for creating graphics
+% They are commented out because they may conflict with Quarto's syntax highlighting
+% 
+% Uncomment these if you need to create complex diagrams or plots in pure LaTeX,
+% but be aware this may cause issues with Quarto code blocks
+%
+% \usepackage{multicol,pst-plot}
+% \usepackage{pstricks}
+
+% ----------------------------------------------------------------------------
+% MATHEMATICS PACKAGES
+% ----------------------------------------------------------------------------
+% These packages provide enhanced mathematical typesetting capabilities
+
+% amsmath: American Mathematical Society's math extensions
+% Provides environments like align, gather, split for complex equations
+\usepackage{amsmath}
+
+% amsfonts: Additional mathematical fonts (e.g., blackboard bold: ℝ, ℂ, ℕ)
+\usepackage{amsfonts}
+
+% amssymb: Additional mathematical symbols (e.g., ∴, ∵, ⊂, ⊃)
+\usepackage{amssymb}
+
+% eucal: Euler calligraphic font (elegant script letters for math)
+\usepackage{eucal}
+
+% ----------------------------------------------------------------------------
+% CUSTOM MATHEMATICAL OPERATORS AND COMMANDS
+% ----------------------------------------------------------------------------
+% Define custom commands to make writing mathematical expressions easier
+
+% \DeclareMathOperator: Creates a new operator that appears in Roman font
+% Tr: Trace operator (used in linear algebra and quantum mechanics)
+\DeclareMathOperator{\tr}{Tr}
+
+% \newcommand*: Defines a new command (the * means it doesn't allow paragraph breaks)
+% \op{x}: Creates an operator with a check mark and bold font
+% Example: \op{H} produces Ȟ in bold
+\newcommand*{\op}[1]{\check{\mathbf#1}}
+
+% Dirac notation commands for quantum mechanics:
+
+% \bra{x}: Creates a "bra" vector ⟨x|
+% Example: \bra{\psi} produces ⟨ψ|
+\newcommand{\bra}[1]{\langle #1 |}
+
+% \ket{x}: Creates a "ket" vector |x⟩
+% Example: \ket{\psi} produces |ψ⟩
+\newcommand{\ket}[1]{| #1 \rangle}
+
+% \braket{x}{y}: Creates an inner product ⟨x|y⟩
+% Example: \braket{\psi}{\phi} produces ⟨ψ|φ⟩
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+
+% \mean{x}: Creates an expectation value ⟨x⟩
+% Example: \mean{E} produces ⟨E⟩ (mean energy)
+\newcommand{\mean}[1]{\langle #1 \rangle}
+
+% \opvec{x}: Creates an operator vector with check mark and vector arrow
+% Example: \opvec{p} produces a momentum operator
+\newcommand{\opvec}[1]{\check{\vec #1}}
+
+% \renewcommand: Redefines an existing command
+% \sp{x}: Creates a split equation environment
+% This allows multi-line equations within display math mode
+% Example: \sp{a &= b \\ &= c} produces aligned equations
+\renewcommand{\sp}[1]{$${\begin{split}#1\end{split}}$$}
+
+% ============================================================================
+% CUSTOM TITLE PAGE FOR UOFA ENGINEERING ASSIGNMENTS
+% ============================================================================
+% This section creates a custom title page with student information and logo
+
+% \makeatletter and \makeatother: Allow use of @ in command names
+% In LaTeX, @ is normally not allowed in command names, but internal
+% commands often use it. These commands temporarily change that rule.
+\makeatletter
+
+% ----------------------------------------------------------------------------
+% DEFINE METADATA COMMANDS AND DEFAULT VALUES
+% ----------------------------------------------------------------------------
+% These commands define the student information that will appear on the title page
+
+% \def: Defines a new command or redefines an existing one
+% The following create warning messages if metadata is not provided:
+
+% Student name - shows warning if not set
+\def\@studentname{\@latex@warning@no@line{No \noexpand\studentname given}}
+
+% Student ID - shows warning if not set
+\def\@studentid{\@latex@warning@no@line{No \noexpand\studentid given}}
+
+% Course name - shows warning if not set
+\def\@course{\@latex@warning@no@line{No \noexpand\course given}}
+
+% Assignment title - shows warning if not set
+\def\@assignment{\@latex@warning@no@line{No \noexpand\assignment given}}
+
+% Date - optional field, no warning if not provided
+\def\@date{}
+
+% Logo path - default to the built-in logo
+% This can be overridden by providing a custom logo path in YAML
+\def\@logopath{_extensions/uofa-eng-assignment/logo.png}
+
+% ----------------------------------------------------------------------------
+% DEFINE USER COMMANDS TO SET METADATA
+% ----------------------------------------------------------------------------
+% These commands allow users to set the metadata values
+
+% \newcommand: Creates a new command
+% [1]: Indicates the command takes 1 argument
+% {#1}: Refers to the first (and only) argument
+
+% Set student name
+\newcommand{\studentname}[1]{\def\@studentname{#1}}
+
+% Set student ID
+\newcommand{\studentid}[1]{\def\@studentid{#1}}
+
+% Set course name and code
+\newcommand{\course}[1]{\def\@course{#1}}
+
+% Set assignment number or title
+\newcommand{\assignment}[1]{\def\@assignment{#1}}
+
+% Set logo path (for custom logo support)
+\newcommand{\logopath}[1]{\def\@logopath{#1}}
+
+% \renewcommand: Redefine the existing \date command
+\renewcommand{\date}[1]{\def\@date{#1}}
+
+% ----------------------------------------------------------------------------
+% REDEFINE \maketitle COMMAND
+% ----------------------------------------------------------------------------
+% \maketitle is the standard LaTeX command that creates the title page
+% We redefine it here to create our custom layout
+
+\renewcommand\maketitle{
+    % -----------------------------------------------------------------------
+    % LEFT SIDE: Student Information
+    % -----------------------------------------------------------------------
+    % \begin{flushleft}...\end{flushleft}: Align content to the left
+    \begin{flushleft}
+        % Display student name (\\: line break)
+        Student Name: \@studentname \\
+        % Display student ID
+        Student ID: \@studentid
+        % Conditional: Only show date if it was provided
+        % \ifx tests if two values are identical
+        % \@date\empty: true if date is empty
+        % \else: if date is not empty, show it
+        % \fi: end of conditional
+        \ifx\@date\empty\else \\ Date: \@date \fi
+    \end{flushleft}
+
+    % -----------------------------------------------------------------------
+    % RIGHT SIDE: University Logo
+    % -----------------------------------------------------------------------
+    % \begin{flushright}...\end{flushright}: Align content to the right
+    % \vspace{-15mm}: Move up by 15 millimeters (negative = move up)
+    % This pulls the logo up to align with the student info
+    \begin{flushright}\vspace{-15mm}
+        % \includegraphics: Insert an image
+        % [height=2cm]: Scale image to 2 centimeters high (width scales proportionally)
+        % \@logopath: Use the logo path (default or custom)
+        \includegraphics[height=2cm]{\@logopath}
+    \end{flushright}
+
+    % -----------------------------------------------------------------------
+    % CENTER: Course and Assignment Information
+    % -----------------------------------------------------------------------
+    % \begin{center}...\end{center}: Center the content
+    % \vspace{-1cm}: Move up by 1 centimeter
+    \begin{center}\vspace{-1cm}
+        % \textbf: Bold text
+        % \large: Larger font size
+        % Display course name in bold and large font
+        \textbf{\large \@course}\\
+        % Display assignment number/title
+        \@assignment
+    \end{center}
+
+    % -----------------------------------------------------------------------
+    % HORIZONTAL RULE (Line Separator)
+    % -----------------------------------------------------------------------
+    % \rule: Draw a line
+    % \linewidth: Make the line span the full width of the text
+    % {0.1mm}: Line thickness (0.1 millimeter)
+    \rule{\linewidth}{0.1mm}
+
+    % -----------------------------------------------------------------------
+    % SPACING AFTER TITLE
+    % -----------------------------------------------------------------------
+    % \bigskip: Add vertical space (approximately one blank line)
+    % Two \bigskip commands = two blank lines
+    \bigskip
+    \bigskip
+}
+
+% \makeatother: Restore normal behavior (@ no longer allowed in command names)
+\makeatother
+
+% ============================================================================
+% END OF TEMPLATE PARTIAL
+% ============================================================================
+% This file is now ready to be included in LaTeX documents.
+% The \maketitle command will generate the custom title page when called.
+% ============================================================================
