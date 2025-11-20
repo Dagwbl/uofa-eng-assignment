@@ -47,7 +47,7 @@ The template supports the following metadata fields:
 
 ## Example
 
-See [template.qmd](template.qmd) for a complete example.
+See [template.qmd](template.qmd) or [example.qmd](example.qmd) for complete examples.
 
 ## Original LaTeX Template
 
