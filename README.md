@@ -2,7 +2,7 @@
 
 A Quarto template for University of Alberta engineering assignments.
 
-Originally an Overleaf/LaTeX template, now converted to Quarto for easier document creation and modern publishing workflows.
+Originally an Overleaf/LaTeX template, now converted to Quarto using template-partials for modern publishing workflows.
 
 ## Installing
 
@@ -20,14 +20,15 @@ After installing, create or edit a `.qmd` file with the following YAML header:
 
 ```yaml
 ---
-title: "Assignment 1"
+title: "Assignment Title"
 format:
   uofa-eng-assignment-pdf: default
-author: "Your Name"
-student-id: "1234567"
+author: "Your Full Name"
+student-id: "Your Student ID"
 course: "Course Name (Course Code)"
 assignment: "Assignment Number"
-date: "2024-01-15"  # Optional
+date: "YYYY-MM-DD"  # Optional
+logo: "path/to/custom/logo.png"  # Optional: Custom logo path
 ---
 ```
 
@@ -45,27 +46,40 @@ The template supports the following metadata fields:
 - `student-id`: Your student ID number
 - `course`: Full course name and code
 - `assignment`: Assignment number or title
-- `date`: (Optional) Assignment date
+- `date`: (Optional) Assignment date in YYYY-MM-DD format
+- `logo`: (Optional) Custom path to a logo image file (defaults to the UofA Engineering logo)
 
 ## Features
 
-- Custom title page with student information and UofA Engineering logo
+- Custom title page with student information and logo
+- Template-partials architecture for better modularity and customization
+- Custom logo support via YAML field
 - Support for mathematical equations (via amsmath, amsfonts, amssymb)
-- Support for Greek Unicode characters in text mode (via textgreek)
+- Support for Greek Unicode characters in text mode
 - Code syntax highlighting (Quarto's default)
 - Compatible with all standard Quarto/Pandoc markdown features
 
-## Advanced Usage
+## Custom Logo
 
-If you need to use advanced LaTeX packages that were commented out to avoid conflicts, you can add them back by modifying `_extensions/uofa-eng-assignment/uofa-eng-assignment.tex`. Packages that may conflict with Quarto's code highlighting include:
+To use a custom logo instead of the default UofA Engineering logo, add the `logo` field to your YAML header:
 
-- `fancybox` - conflicts with verbatim environments
-- `pstricks` and `pst-plot` - may interfere with syntax highlighting
-- `listings` - conflicts with Quarto's default code highlighting (use Quarto's native code blocks instead)
+```yaml
+---
+logo: "path/to/your/logo.png"
+---
+```
+
+The path can be:
+- Relative to your document (e.g., `images/logo.png`)
+- Absolute path (e.g., `/home/user/logos/logo.png`)
+
+## Template Architecture
+
+This template uses Quarto's template-partials system, which allows for better modularity and customization compared to the traditional include-in-header approach. The main template partial is located in `_extensions/uofa-eng-assignment/partials/title.tex`.
 
 ## Example
 
-See [template.qmd](template.qmd) for a complete example.
+See [template.qmd](template.qmd) for a complete example with hints and placeholders.
 
 ## Original LaTeX Template
 

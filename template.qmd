@@ -1,44 +1,31 @@
 ---
-title: "Assignment 1"
+title: "Assignment Title"
 format:
   uofa-eng-assignment-pdf: default
-author: "Amin Bashiri"
-student-id: "0000000"
-course: "Software Construction, Verification, and Evolution (ECE 522)"
-assignment: "Assignment 1"
+author: "Your Full Name"
+student-id: "Your Student ID"
+course: "Course Name (Course Code)"
+assignment: "Assignment Number"
+# date: "YYYY-MM-DD"  # Optional: Uncomment and add date if needed
+# logo: "path/to/custom/logo.png"  # Optional: Custom logo path
 ---
 
 ## Question Number 1
 
-a. Escriba un programa en `python` para calcular un valor aproximado de la integral
+Write your answer here. You can use inline math like $x^2$ or display math:
+
 $$
 \int_0^2\left(x^4 - 2x +1 \right)dx
 $$
 
-b. Escriba un programa que calcule la integral usando la regla de Simpson con 10 *slices*.
-
-c. Compare los resultados con el valor exacto (integre). ¿Cuál es el error fraccional de sus cálculos?
-
-d. Modifique el programa para utilizar cientos de *slices*, y luego miles. Note la mejora en el resultado. Compare estos resultados con la regla del trapecio utilizando este gran numero de *slices*.
-
 ## Question Number 2
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Add more content as needed.
 
 $$
 J_m(x)=\frac{1}{\pi}\int_0^\pi \cos(m\theta-x\sin(\theta))d\theta
 $$
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Solve
-
-a. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-b. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-
 ## Question Number 3
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-- Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
-- Accusantium doloremque laudantium, totam rem aperiam.
+Continue with your assignment content.

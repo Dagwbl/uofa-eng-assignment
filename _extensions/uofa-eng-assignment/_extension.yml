@@ -7,7 +7,7 @@ contributes:
     pdf:
       pdf-engine: lualatex
       fig-pos: H
-      include-in-header:
-        - uofa-eng-assignment.tex
+      template-partials:
+        - partials/title.tex
       filters:
         - uofa-metadata.lua

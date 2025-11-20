@@ -32,6 +32,11 @@ function Meta(meta)
       table.insert(latex_commands, '\\date{' .. pandoc.utils.stringify(meta['date']) .. '}')
     end
     
+    -- Add custom logo path if provided
+    if meta['logo'] then
+      table.insert(latex_commands, '\\logopath{' .. pandoc.utils.stringify(meta['logo']) .. '}')
+    end
+    
     if #latex_commands > 0 then
       local latex_block = pandoc.RawBlock('latex', table.concat(latex_commands, '\n'))
       
