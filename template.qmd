@@ -2,7 +2,7 @@
 title: "Assignment 1"
 format:
   uofa-eng-assignment-pdf: default
-student-name: "Amin Bashiri"
+author: "Amin Bashiri"
 student-id: "0000000"
 course: "Software Construction, Verification, and Evolution (ECE 522)"
 assignment: "Assignment 1"

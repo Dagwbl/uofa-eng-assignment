@@ -8,8 +8,11 @@ function Meta(meta)
     -- Build LaTeX commands for student metadata
     local latex_commands = {}
     
+    -- Use author if student-name is not provided (merge student-name and author)
     if meta['student-name'] then
       table.insert(latex_commands, '\\studentname{' .. pandoc.utils.stringify(meta['student-name']) .. '}')
+    elseif meta['author'] then
+      table.insert(latex_commands, '\\studentname{' .. pandoc.utils.stringify(meta['author']) .. '}')
     end
     
     if meta['student-id'] then
@@ -22,6 +25,11 @@ function Meta(meta)
     
     if meta['assignment'] then
       table.insert(latex_commands, '\\assignment{' .. pandoc.utils.stringify(meta['assignment']) .. '}')
+    end
+    
+    -- Add optional date field
+    if meta['date'] then
+      table.insert(latex_commands, '\\date{' .. pandoc.utils.stringify(meta['date']) .. '}')
     end
     
     if #latex_commands > 0 then

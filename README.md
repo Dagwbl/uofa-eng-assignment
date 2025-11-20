@@ -23,10 +23,11 @@ After installing, create or edit a `.qmd` file with the following YAML header:
 title: "Assignment 1"
 format:
   uofa-eng-assignment-pdf: default
-student-name: "Your Name"
+author: "Your Name"
 student-id: "1234567"
 course: "Course Name (Course Code)"
 assignment: "Assignment Number"
+date: "2024-01-15"  # Optional
 ---
 ```
 
@@ -40,10 +41,11 @@ quarto render your-file.qmd
 
 The template supports the following metadata fields:
 
-- `student-name`: Your full name
+- `author` or `student-name`: Your full name (use `author` for compatibility with standard Quarto documents)
 - `student-id`: Your student ID number
 - `course`: Full course name and code
 - `assignment`: Assignment number or title
+- `date`: (Optional) Assignment date
 
 ## Features
 
@@ -63,7 +65,7 @@ If you need to use advanced LaTeX packages that were commented out to avoid conf
 
 ## Example
 
-See [template.qmd](template.qmd) or [example.qmd](example.qmd) for complete examples.
+See [template.qmd](template.qmd) for a complete example.
 
 ## Original LaTeX Template
 
