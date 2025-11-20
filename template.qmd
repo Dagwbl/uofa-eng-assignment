@@ -6,14 +6,13 @@ format:
       - title.tex
     pdf-engine: lualatex
     fig-pos: H
-    filters:
-      - uofa-metadata.lua
-author: "Your Full Name"
-student-id: "Your Student ID"
-course: "Course Name (Course Code)"
-assignment: "Assignment Number"
-# date: "YYYY-MM-DD"  # Optional: Uncomment and add date if needed
-# logo: "path/to/custom/logo.png"  # Optional: Custom logo path
+header-includes: |
+  \studentname{Your Full Name}
+  \studentid{Your Student ID}
+  \course{Course Name (Course Code)}
+  \assignment{Assignment Number}
+  % \date{YYYY-MM-DD}  % Optional: Uncomment and add date if needed
+  % \logopath{path/to/custom/logo.png}  % Optional: Custom logo path
 ---
 
 ## Question Number 1
