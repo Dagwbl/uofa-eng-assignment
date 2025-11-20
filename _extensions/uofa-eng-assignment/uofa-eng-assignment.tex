@@ -14,33 +14,37 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
-\usepackage{listings}
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-}
-\lstset{style=mystyle}
+% Listings package disabled by default to avoid conflicts with Quarto's syntax highlighting
+% Uncomment the following lines if you need to use \begin{lstlisting} in raw LaTeX blocks
+% \usepackage{listings}
+% \lstdefinestyle{mystyle}{
+%     backgroundcolor=\color{backcolour},
+%     commentstyle=\color{codegreen},
+%     keywordstyle=\color{magenta},
+%     numberstyle=\tiny\color{codegray},
+%     stringstyle=\color{codepurple},
+%     basicstyle=\footnotesize,
+%     breakatwhitespace=false,
+%     breaklines=true,
+%     captionpos=b,
+%     keepspaces=true,
+%     numbers=left,
+%     numbersep=5pt,
+%     showspaces=false,
+%     showstringspaces=false,
+%     showtabs=false,
+%     tabsize=2
+% }
 
 \usepackage{graphicx}
-\usepackage{fancybox}
+% \usepackage{fancybox}  % Commented out - may conflict with verbatim environments
 \usepackage[utf8]{inputenc}
 \usepackage{epsfig,graphicx}
-\usepackage{multicol,pst-plot}
-\usepackage{pstricks}
+\usepackage{multicol}
+% pst-plot and pstricks commented out due to conflicts with Quarto's syntax highlighting
+% Uncomment if needed, but this may cause issues with code blocks in Quarto
+% \usepackage{multicol,pst-plot}
+% \usepackage{pstricks}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
