@@ -33,6 +33,10 @@ test-unicode.pdf
 test-unicode.tex
 test-unicode.qmd
 
+## Preview files for README (DO NOT IGNORE)
+!preview.pdf
+!preview.png
+
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
 *.bcf
